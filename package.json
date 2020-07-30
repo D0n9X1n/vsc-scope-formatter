@@ -1,0 +1,52 @@
+{
+	"name": "scope-formatter-vsc",
+	"displayName": "scope.formatter.vsc",
+	"description": "Yet, just another plugin used for format scope script.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:scope",
+		"onLanguage:mscope"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "SQL Formatter",
+			"properties": {
+				"sql-formatter.uppercase": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "Convert keywords to uppercase"
+				},
+				"sql-formatter.linesBetweenQueries": {
+					"scope": "resource",
+					"type": "number",
+					"minimum": 1,
+					"default": 2,
+					"description": "Change number of linebreaks between queries"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"lodash": "^4.16.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.47.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	}
+}
