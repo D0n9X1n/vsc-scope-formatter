@@ -1,19 +1,20 @@
 {
 	"name": "scope-formatter-vsc",
 	"displayName": "scope.formatter.vsc",
-	"description": "Yet, just another plugin used for format scope script.",
+	"description": "Yet, just another extension for Visual Studio Code to format scope and mscope code.",
 	"version": "0.0.1",
 	"publisher": "MikeCoder",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
 	"categories": [
-		"Other"
+		"Formatters"
 	],
 	"activationEvents": [
 		"onLanguage:scope",
 		"onLanguage:mscope"
 	],
+	"repository": "https://github.com/MikeCoder/vsc-scope-formatter",
 	"main": "./src/extension.js",
 	"contributes": {
 		"configuration": {
@@ -23,7 +24,7 @@
 				"sql-formatter.uppercase": {
 					"scope": "resource",
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "Convert keywords to uppercase"
 				},
 				"sql-formatter.linesBetweenQueries": {
