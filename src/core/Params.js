@@ -11,39 +11,35 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-/**
- * Handles placeholder replacement with given params.
- */
 var Params =
-/*#__PURE__*/
-function () {
-  function Params(params) {
-    _classCallCheck(this, Params);
+  function () {
+    function Params(params) {
+      _classCallCheck(this, Params);
 
-    this.params = params;
-    this.index = 0;
-  }
+      this.params = params;
+      this.index = 0;
+    }
 
-  _createClass(Params, [{
-    key: "get",
-    value: function get(_ref) {
-      var key = _ref.key,
+    _createClass(Params, [{
+      key: "get",
+      value: function get(_ref) {
+        var key = _ref.key,
           value = _ref.value;
 
-      if (!this.params) {
-        return value;
+        if (!this.params) {
+          return value;
+        }
+
+        if (key) {
+          return this.params[key];
+        }
+
+        return this.params[this.index++];
       }
+    }]);
 
-      if (key) {
-        return this.params[key];
-      }
-
-      return this.params[this.index++];
-    }
-  }]);
-
-  return Params;
-}();
+    return Params;
+  }();
 
 exports["default"] = Params;
 module.exports = exports.default;

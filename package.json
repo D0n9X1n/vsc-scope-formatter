@@ -2,7 +2,7 @@
 	"name": "scope-formatter-vsc",
 	"displayName": "scope.formatter.vsc",
 	"description": "Yet, just another extension for Visual Studio Code to format scope and mscope code.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "MikeCoder",
 	"engines": {
 		"vscode": "^1.47.0"
@@ -19,7 +19,7 @@
 	"contributes": {
 		"configuration": {
 			"type": "object",
-			"title": "SQL Formatter",
+			"title": "Scope Formatter",
 			"properties": {
 				"sql-formatter.uppercase": {
 					"scope": "resource",

@@ -14,8 +14,8 @@ const getSetting = (group, key, def) => {
 const getConfig = ({ insertSpaces, tabSize }) => ({
 	indent: insertSpaces ? ' '.repeat(tabSize) : '\t',
 	language: getSetting('sql-formatter', 'dialect', 'mscope'),
-	uppercase: getSetting('sql-formatter', 'uppercase', false),
-	linesBetweenQueries: getSetting('sql-formatter', 'linesBetweenQueries', 2)
+	uppercase: getSetting('sql-formatter', 'uppercase', true),
+	linesBetweenQueries: getSetting('sql-formatter', 'linesBetweenQueries', 1)
 });
 
 const format = (text, config) => {

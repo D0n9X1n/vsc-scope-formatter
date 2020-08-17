@@ -43,13 +43,6 @@ function () {
     this.tokens = [];
     this.index = 0;
   }
-  /**
-   * Formats whitespace in a SQL string to make it easier to read.
-   *
-   * @param {String} query The SQL query string
-   * @return {String} formatted query
-   */
-
 
   _createClass(Formatter, [{
     key: "format",
