@@ -3,6 +3,7 @@
 	"displayName": "scope.formatter.vsc",
 	"description": "Yet, just another plugin used for format scope script.",
 	"version": "0.0.1",
+	"publisher": "MikeCoder",
 	"engines": {
 		"vscode": "^1.47.0"
 	},

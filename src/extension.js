@@ -18,11 +18,20 @@ const getConfig = ({ insertSpaces, tabSize }) => ({
 	linesBetweenQueries: getSetting('sql-formatter', 'linesBetweenQueries', 2)
 });
 
-const format = (text, config) => sqlFormatter.format(text, config);
+const format = (text, config) => {
+	return sqlFormatter.format(text, config);
+};
 
-module.exports.activate = () =>
+module.exports.activate = () => {
 	vscode.languages.registerDocumentRangeFormattingEditProvider('mscope', {
 		provideDocumentRangeFormattingEdits: (document, range, options) => [
 			vscode.TextEdit.replace(range, format(document.getText(range), getConfig(options)))
 		]
 	});
+
+	vscode.languages.registerDocumentRangeFormattingEditProvider('scope', {
+		provideDocumentRangeFormattingEdits: (document, range, options) => [
+			vscode.TextEdit.replace(range, format(document.getText(range), getConfig(options)))
+		]
+	});
+}
